@@ -1,4 +1,4 @@
-## WRO Future Engineers 2026 - Team Nova
+# WRO Future Engineers 2026 - Team Nova
 This repository contains the software and documentation developed for an autonomous vehicle designed to compete in the WRO Future Engineers 2026 competition.
 
 The project focuses on autonomous navigation, obstacle detection, trajectory planning, and real-time decision-making. The vehicle is designed to interpret sensor data from its environment and use this information to determine and execute appropriate movements throughout the competition field.
