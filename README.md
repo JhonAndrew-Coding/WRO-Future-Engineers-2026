@@ -111,7 +111,7 @@ When the vehicle moves in a straight line, both wheels rotate at approximately t
 <p align="center">
   <img src="./models/diferencial.png" alt="Diferencual" width="50%">
 </p>
--
+
 In simple terms, the differential splits the drivetrain's power between the two wheels while allowing each wheel to rotate at the appropriate speed during a turn.
 
 **Key features**
