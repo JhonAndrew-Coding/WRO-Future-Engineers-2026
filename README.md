@@ -233,10 +233,18 @@ The "maniobra_escape" function is responsible for preventing collisions with wal
 ---
 
 ### Main System Setup and Sensor Reading <a class="anchor" id="block-main"></a>
-
 The "task1" function initializes the main parameters of the robot, including the PD controller values and the IDs assigned to the red and green objects. It also configures the AI camera for color recognition and centers the servo before starting the main loop. During the loop, the robot continuously receives information from the AI camera and ultrasonic sensors.
 
 <b>Block code:</b>
+
+<p align="center">
+  <img src="./src/block_main.png" alt="Main Code" width="50%">
+</p>
+
+---
+
+### Object Detection and Robot Navigation <a class="anchor" id="block-objdetec"></a>
+This section contains the main decision-making process of the robot. It checks whether an obstacle is too close and activates the escape maneuver when necessary. If the path is clear, the robot identifies whether the detected object is red or green and uses the PD controller to adjust its direction. If no recognized object is detected, the robot continues moving forward with the servo centered.
 
 <p align="center">
   <img src="./src/block_main.png" alt="Main Code" width="50%">
