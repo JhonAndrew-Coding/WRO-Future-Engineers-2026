@@ -1,30 +1,51 @@
-Engineering materials
-====
+## WRO Future Engineers 2026 - Team Nova
+This repository contains the software and documentation developed for an autonomous vehicle designed to compete in the WRO Future Engineers 2026 competition.
 
-This repository contains engineering materials of a self-driven vehicle's model participating in the WRO Future Engineers competition in the season 2022.
+The project focuses on autonomous navigation, obstacle detection, trajectory planning, and real-time decision-making. The vehicle is designed to interpret sensor data from its environment and use this information to determine and execute appropriate movements throughout the competition field.
 
-## Content
+## Project Overview
 
-* `t-photos` contains 2 photos of the team (an official one and one funny photo with all team members)
-* `v-photos` contains 6 photos of the vehicle (from every side, from top and bottom)
-* `video` contains the video.md file with the link to a video where driving demonstration exists
-* `schemes` contains one or several schematic diagrams in form of JPEG, PNG or PDF of the electromechanical components illustrating all the elements (electronic components and motors) used in the vehicle and how they connect to each other.
-* `src` contains code of control software for all components which were programmed to participate in the competition
-* `models` is for the files for models used by 3D printers, laser cutting machines and CNC machines to produce the vehicle elements. If there is nothing to add to this location, the directory can be removed.
-* `other` is for other files which can be used to understand how to prepare the vehicle for the competition. It may include documentation how to connect to a SBC/SBM and upload files there, datasets, hardware specifications, communication protocols descriptions etc. If there is nothing to add to this location, the directory can be removed.
+The autonomous system integrates sensor processing, vehicle control, and navigation algorithms to achieve reliable and precise movement. The software continuously processes information from the vehicle's sensors and adjusts its trajectory according to the detected conditions.
 
-## Introduction
+The main objectives of the system are:
 
-_This part must be filled by participants with the technical clarifications about the code: which modules the code consists of, how they are related to the electromechanical components of the vehicle, and what is the process to build/compile/upload the code to the vehicle’s controllers._
+ - Autonomous navigation of the competition field.
+ - Detection and avoidance of obstacles.
+ - Real-time trajectory planning and adjustment.
+ - Precise steering and motor control.
+ - Reliable decision-making based on sensor data.
+ - Autonomous execution of the required maneuvers.
+ - Technical Approach
 
-## Team Photos
+The project combines embedded programming, robotics, sensor integration, control systems, and computational geometry.
+
+The navigation system uses sensor measurements to estimate the vehicle's position and identify relevant elements of the environment. Based on this information, the control algorithms determine the appropriate steering and movement commands required to follow the planned trajectory.
+
+Special attention is given to reliability, repeatability, and adaptability, ensuring that the vehicle can operate under different configurations of the competition field.
+
+## Repository Structure
+
+The repository contains the source code and supporting resources required for the development and operation of the autonomous vehicle.
+
+The code is organized to facilitate the development, testing, and modification of the different components of the autonomous system.
+
+## Competition
+
+World Robot Olympiad – Future Engineers 2026
+
+This project is developed as part of our participation in the WRO Future Engineers category, with the objective of designing and implementing a reliable autonomous robotic system capable of completing the competition challenges.
+
+## Table of Contents
+* [The Team](#team)
+
+## The Team <a class="anchor" id="team"><a/>
 
 ### Juan Andrés Guerra
 <p align="center">
   <img src="./t-photos/juan A photo .jpeg" alt="Juan Andrés Guerra" width="80%">
 </p>
 
-<b>High School:</b> Windsor School, Valledupar
+<b>High School:</b> Windsor School, Valledupar, Colombia
 
 ---
 
@@ -34,7 +55,7 @@ _This part must be filled by participants with the technical clarifications abou
   <img src="./t-photos/angel photo.jpeg" alt="Angel Valeria Ruiz" width="80%">
 </p>
 
-<b>High School:</b> Ciberkids, Valledupar
+<b>High School:</b> Ciberkids, Valledupar, Colombia
 
 
 ## Vehicle's photos
