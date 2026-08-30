@@ -247,5 +247,9 @@ The "task1" function initializes the main parameters of the robot, including the
 This section contains the main decision-making process of the robot. It checks whether an obstacle is too close and activates the escape maneuver when necessary. If the path is clear, the robot identifies whether the detected object is red or green and uses the PD controller to adjust its direction. If no recognized object is detected, the robot continues moving forward with the servo centered.
 
 <p align="center">
-  <img src="./src/block_main.png" alt="Main Code" width="50%">
+  <img src="./src/Main_1.png" alt="Main Code 1" width="50%">
+</p>
+
+<p align="center">
+  <img src="./src/Main_2.png" alt="Main Code 2" width="50%">
 </p>
