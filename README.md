@@ -232,7 +232,7 @@ The "maniobra_escape" function is responsible for preventing collisions with wal
 
 ---
 
-### Main System Setup and Sensor Reading <a class="anchor" id="block-main"
+### Main System Setup and Sensor Reading <a class="anchor" id="block-main"></a>
 
 The "task1" function initializes the main parameters of the robot, including the PD controller values and the IDs assigned to the red and green objects. It also configures the AI camera for color recognition and centers the servo before starting the main loop. During the loop, the robot continuously receives information from the AI camera and ultrasonic sensors.
 
