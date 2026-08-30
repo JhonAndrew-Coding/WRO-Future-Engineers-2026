@@ -38,7 +38,8 @@ This project is developed as part of our participation in the WRO Future Enginee
 ## Table of Contents
 * [The Team](#team)
 * [Robot Photos](#robot-image)
-* [Code of the robot](#code)
+* [Python Code](#py-code)
+* [Robocode Block Code](#block-code)
 
 ## The Team <a class="anchor" id="team"></a>
 
@@ -76,7 +77,7 @@ This project is developed as part of our participation in the WRO Future Enginee
 | <img src="./v-photos/top.jpeg" width="90%" /> | <img src="./v-photos/bottom.jpeg" width="85%" /> | 
 | *Top* | *Bottom* |
 
-## Code Python <a class="anchor" id="code"></a>
+## Code Python <a class="anchor" id="py-code"></a>
 This program controls an autonomous robot using an AI camera, ultrasonic sensors, a servo motor, and drive motors. The robot is designed to detect colored objects, adjust its direction according to their position, and avoid obstacles while moving through its environment.
 
 ### Libraries and Variables
@@ -198,5 +199,9 @@ The final line calls the "task1()" function, which starts the entire control sys
 ```ino
 task1()
 ```
+## Block Code <a class="anchor" id="block-code"></a>
+This part uses RoboCode blocks to program an autonomous robot capable of detecting colored objects, adjusting its direction, and avoiding obstacles using ultrasonic sensors.
+### PD Steering Control
+The "calcular_angulo_pd" function controls the robot's steering according to the position of the detected object. It calculates the error between the current and target positions, then uses proportional and derivative control to determine the necessary steering correction. The final angle is limited between 40° and 140° to prevent excessive turns.
 
 
