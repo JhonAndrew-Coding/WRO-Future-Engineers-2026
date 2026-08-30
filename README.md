@@ -157,7 +157,7 @@ The motor includes a built-in encoder, which provides feedback about the motor's
 **Role in the Vehicle:**
 The motor acts as the main source of mechanical power. Its output rotation is transferred through the gear system to the drivetrain and differential, which then distributes the motion to the wheels. The encoder allows the controller to obtain rotational feedback, making it possible to achieve more accurate speed and movement control.
 
-## Steering System <a class="anchor" id="steering-sis"
+## Steering System <a class="anchor" id="steering-sis"></a>
 The steering system is designed to control the direction of the vehicle by turning the front wheels. The system uses a Mini Servo connected to a gear mechanism that transfers the servo's movement to the steering linkage.
 
 **How it was built**
@@ -170,7 +170,7 @@ As the gear mechanism rotates, it moves the steering linkage and changes the ang
 The gear system also provides mechanical transmission and control, allowing the relatively small movement of the servo to be effectively transferred to the steering mechanism.
 </p>
 <p align="center">
-  <img src="./models/steering_sis.png" alt="Steering System" width="50%">
+  <img src="./models/steering_sis.jpeg" alt="Steering System" width="50%">
 </p>
 
 **Key Features**
@@ -195,7 +195,7 @@ In the steering system, the servo's output shaft is connected to a gear mechanis
 
 </p>
 <p align="center">
-  <img src="./models/Mini_servo2.png" alt="Mini servo" width="50%">
+  <img src="./models/Mini_servo2.png" alt="Mini servo2" width="50%">
 </p>
 
 **Specifications**
