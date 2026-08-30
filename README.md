@@ -38,12 +38,12 @@ This project is developed as part of our participation in the WRO Future Enginee
 ## Table of Contents
 * [The Team](#team)
 * [Robot Photos](#robot-image)
-* [Mobility Management](mob-manager)
-  * [Power Train](power-train)
-    * [Diferencial](diferencial)
-    * [Motor](motor)
-  * [Steering](steering-sis)
-    * [Servo Motor](servo-motor) 
+* [Mobility Management](#mob-manager)
+  * [Power Train](#power-train)
+    * [Diferencial](#diferencial)
+    * [Motor](#motor)
+  * [Steering](#steering-sis)
+    * [Servo Motor](#servo-motor) 
 * [Python Code](#py-code)
   * [Libraries and Variables](#py-lib-variables)
   * [PD Steering Control](#py-pd-control)
@@ -96,9 +96,9 @@ This project is developed as part of our participation in the WRO Future Enginee
 # Mobility Management <a class="anchor" id="mob-manager"></a>
 The robot's mobility is managed by a combination of components, including the powertrain and steering system. These elements work together to ensure the robot's smooth and efficient movement.
 
-## Power Train <a class="anchor" id="power-train"
+## Power Train <a class="anchor" id="power-train"></a>
 
-### Diferencial <a class="anchor" id="diferencial"
+### Diferencial <a class="anchor" id="diferencial"></a>
 This differential was built using LEGO Technic components and is designed to transmit power from the drivetrain to both wheels while allowing them to rotate at different speeds.
 
 **How it was built:**
