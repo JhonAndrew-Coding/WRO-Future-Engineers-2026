@@ -46,7 +46,9 @@ This project is developed as part of our participation in the WRO Future Enginee
   * [Object Detection and Navigation](#py-objdetec)
   * [Starting the Program](#py-starting-code)  
 * [Robocode Block Code](#block-code)
-  * [PD Steering Control](#block-pd-control)
+  * [B PD Steering Control](#block-pd-control)
+  * [B Escape Maneuver](#block-escape-maneuver)
+  * [B Main System Setup and Sensor Reading](#block-pd-control)
 
 ## The Team <a class="anchor" id="team"></a>
 
@@ -230,4 +232,11 @@ The "maniobra_escape" function is responsible for preventing collisions with wal
 
 ---
 
+### Main System Setup and Sensor Reading <a class="anchor" id="block-main"
 
+The "task1" function initializes the main parameters of the robot, including the PD controller values and the IDs assigned to the red and green objects. It also configures the AI camera for color recognition and centers the servo before starting the main loop. During the loop, the robot continuously receives information from the AI camera and ultrasonic sensors.
+
+<b>Block code:</b>
+
+<p align="center">
+  <img src="./src/" alt="Main Code" width="50%">
