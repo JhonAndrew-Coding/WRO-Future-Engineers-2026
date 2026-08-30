@@ -99,6 +99,27 @@ The robot's mobility is managed by a combination of components, including the po
 ## Power Train <a class="anchor" id="power-train"
 
 ### Diferencial <a class="anchor" id="diferencial"
+This differential was built using LEGO Technic components and is designed to transmit power from the drivetrain to both wheels while allowing them to rotate at different speeds.
+
+**How it was built:**
+The differential consists of a central gear mechanism enclosed within a rigid LEGO Technic frame. The main drive gear transfers rotational power into the differential housing, while a set of bevel gears inside the mechanism distributes the rotation between the two wheel axles. The axles are connected to the left and right wheels, allowing the system to transfer torque to both sides.
+
+**How it works:**
+When the vehicle moves in a straight line, both wheels rotate at approximately the same speed. When the vehicle turns, the outer wheel needs to travel a greater distance than the inner wheel. The bevel gears inside the differential allow the two output axles to rotate at different speeds while still receiving power from the drivetrain. This reduces wheel slipping and makes the vehicle turn more smoothly.
+
+</p>
+<p align="center">
+  <img src="./models/diferencial.png" alt="Diferencual" width="50%">
+</p>
+-
+In simple terms, the differential splits the drivetrain's power between the two wheels while allowing each wheel to rotate at the appropriate speed during a turn.
+
+**Key features**
+* Transfers power to both wheels.
+* Allows different rotational speeds between the wheels.
+* Improves turning performance.
+* Reduces tire slipping during turns.
+* Built entirely with LEGO Technic gears, axles, and structural elements.
 
 
 ## Code Python <a class="anchor" id="py-code"></a>
