@@ -39,14 +39,14 @@ This project is developed as part of our participation in the WRO Future Enginee
 * [The Team](#team)
 * [Robot Photos](#robot-image)
 * [Python Code](#py-code)
-  *[Libraries and Variables](#py-lib-variables)
-  *[PD Steering Control](#py-pd-control)
-  *[Escape Maneuver](#py-escape-Maneuver)
-  *[Main Control System](#py-main-control)
-  *[Object Detection and Navigation](#py-objdetec)
-  *[Starting the Program](#py-starting-code)  
+  * [Libraries and Variables](#py-lib-variables)
+  * [PD Steering Control](#py-pd-control)
+  * [Escape Maneuver](#py-escape-Maneuver)
+  * [Main Control System](#py-main-control)
+  * [Object Detection and Navigation](#py-objdetec)
+  * [Starting the Program](#py-starting-code)  
 * [Robocode Block Code](#block-code)
-  *[PD Steering Control](#block-pd-control)
+  * [PD Steering Control](#block-pd-control)
 
 ## The Team <a class="anchor" id="team"></a>
 
