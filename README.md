@@ -239,4 +239,5 @@ The "task1" function initializes the main parameters of the robot, including the
 <b>Block code:</b>
 
 <p align="center">
-  <img src="./src/" alt="Main Code" width="50%">
+  <img src="./src/block_main.png" alt="Main Code" width="50%">
+</p>
