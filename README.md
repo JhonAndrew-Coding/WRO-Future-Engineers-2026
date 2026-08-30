@@ -158,8 +158,60 @@ The motor includes a built-in encoder, which provides feedback about the motor's
 The motor acts as the main source of mechanical power. Its output rotation is transferred through the gear system to the drivetrain and differential, which then distributes the motion to the wheels. The encoder allows the controller to obtain rotational feedback, making it possible to achieve more accurate speed and movement control.
 
 ## Steering System <a class="anchor" id="steering-sis"
+The steering system is designed to control the direction of the vehicle by turning the front wheels. The system uses a Mini Servo connected to a gear mechanism that transfers the servo's movement to the steering linkage.
 
+**How it was built**
+The steering system consists of a Mini Servo, a series of gears, a steering shaft, and a mechanical linkage connected to the front wheels. The servo is mounted securely inside the vehicle's structure, while its output is connected to the gear system.
+The gears transmit the servo's rotation to the steering mechanism. The final gear is connected to the steering linkage, which moves the front wheels to the left or right.
 
+**How it works**
+When the controller sends a signal to the Mini Servo, the servo rotates to a specific position. This rotation is transferred through the gears, which convert the servo's movement into the required steering motion.
+As the gear mechanism rotates, it moves the steering linkage and changes the angle of the front wheels. By controlling the servo position, the vehicle can steer left, right, or return to its central position.
+The gear system also provides mechanical transmission and control, allowing the relatively small movement of the servo to be effectively transferred to the steering mechanism.
+</p>
+<p align="center">
+  <img src="./models/steering_sis.png" alt="Steering System" width="50%">
+</p>
+
+**Key Features**
+* Uses a ZMROBO Mini Servo for steering control.
+* Gear mechanism transfers the servo's rotation to the steering linkage.
+* Allows the front wheels to turn left and right.
+* Provides controlled and precise steering movement.
+* The structure keeps the steering mechanism securely aligned.
+* The servo can return the wheels to a centered position when required.
+
+### Servo Motor <a class="anchor" id="servo-motor"></a>
+The **ZMROBO Mini Servo** is an integrated servo unit that combines motor control, servo drive, and bus communication in a single device. It is mainly designed for micro-robot applications such as joint, wheel, and track driving, while also providing precise position and angle control.
+
+**How it works**
+The servo receives commands from the robot's controller through its communication interface and rotates its output shaft to the requested position. Its 0–359° operating range allows almost a full rotation, while the built-in control system provides precise positioning with an accuracy of ≤1°.
+In the steering system, the servo's output shaft is connected to a gear mechanism. When the servo rotates, the gears transfer its movement to the steering linkage, causing the front wheels to change direction.
+
+</p>
+<p align="center">
+  <img src="./models/Mini_servo.png" alt="Mini servo" width="50%">
+</p>
+
+</p>
+<p align="center">
+  <img src="./models/Mini_servo2.png" alt="Mini servo" width="50%">
+</p>
+
+**Specifications**
+* Voltage range: 5–9 V DC
+* Operating angle: 0–359°
+* Positioning accuracy: ≤1°
+* Maximum speed: ≤0.2 sec/60°
+* Maximum torque: ≥8 kgf·cm at 5 V
+* Gear system: High-precision metal gears
+* Bearings: Double ball bearings
+* Communication: Built-in bus communication interface
+* Control: Integrated motor control and servo drive
+* Role in the Steering System
+
+The servo acts as the main actuator of the steering system. It converts electrical commands from the controller into precise rotational movement, which is then transmitted through the gears to the steering mechanism. Its high positioning accuracy and strong torque allow the front wheels to be controlled reliably.
+This combination of precise positioning, metal gears, and double ball bearings makes the servo suitable for accurate and responsive steering in the robot.
 
 ## Code Python <a class="anchor" id="py-code"></a>
 This program controls an autonomous robot using an AI camera, ultrasonic sensors, a servo motor, and drive motors. The robot is designed to detect colored objects, adjust its direction according to their position, and avoid obstacles while moving through its environment.
