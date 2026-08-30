@@ -48,7 +48,7 @@ This project is developed as part of our participation in the WRO Future Enginee
 * [Robocode Block Code](#block-code)
   * [B PD Steering Control](#block-pd-control)
   * [B Escape Maneuver](#block-escape-maneuver)
-  * [B Main System Setup and Sensor Reading](#block-pd-control)
+  * [B Main System Setup and Sensor Reading](#block-main)
 
 ## The Team <a class="anchor" id="team"></a>
 
