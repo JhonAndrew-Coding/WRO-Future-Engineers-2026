@@ -39,7 +39,14 @@ This project is developed as part of our participation in the WRO Future Enginee
 * [The Team](#team)
 * [Robot Photos](#robot-image)
 * [Python Code](#py-code)
+  *[Libraries and Variables](#py-lib-variables)
+  *[PD Steering Control](#py-pd-control)
+  *[Escape Maneuver](#py-escape-Maneuver)
+  *[Main Control System](#py-main-control)
+  *[Object Detection and Navigation](#py-objdetec)
+  *[Starting the Program](#py-starting-code)  
 * [Robocode Block Code](#block-code)
+  *[PD Steering Control](#block-pd-control)
 
 ## The Team <a class="anchor" id="team"></a>
 
@@ -80,7 +87,7 @@ This project is developed as part of our participation in the WRO Future Enginee
 ## Code Python <a class="anchor" id="py-code"></a>
 This program controls an autonomous robot using an AI camera, ultrasonic sensors, a servo motor, and drive motors. The robot is designed to detect colored objects, adjust its direction according to their position, and avoid obstacles while moving through its environment.
 
-### Libraries and Variables
+### Libraries and Variables <a class="anchor" id="py-lib-variables"></a>
 
 The program starts by importing the libraries needed to communicate with and control the different hardware components of the robot. It also defines several global variables that will store information such as detected objects, sensor measurements, steering angles, and the values required for the PD controller.
 ```ino
@@ -103,7 +110,7 @@ var_giro = 0
 var_angulo_seguro = 0
 var_angulo_escape = 0
 ```
-### PD Steering Control
+### PD Steering Control <a class="anchor" id="py-pd-control"></a>
 The "calcular_angulo_pd()" function is responsible for determining how the robot should steer based on the position of the object detected by the AI camera. It calculates the difference between the object's current position and the desired position, then uses proportional and derivative values to create a smooth steering correction. The resulting angle is also limited to keep the servo within a safe range.
 ```ino
 def calcular_angulo_pd(x_actual, x_objetivo):
@@ -121,7 +128,7 @@ def calcular_angulo_pd(x_actual, x_objetivo):
         else:
             var_angulo_seguro = var_angulo
 ```
-### Escape Maneuver
+### Escape Maneuver <a class="anchor" id="py-escape-maneuver"></a>
 The "maniobra_escape()" function is designed to prevent the robot from colliding with nearby walls or obstacles. When an obstacle is detected, the robot stops and uses the distances measured by the ultrasonic sensors to determine the safest direction to turn. It then moves backward to create space before returning the servo to its central position.
 ```ino
 def maniobra_escape(dist_derecha, dist_izquierda):
@@ -144,7 +151,7 @@ def maniobra_escape(dist_derecha, dist_izquierda):
     motor.SetMotor(1, 0)
     rcu.SetWaitForTime(0.2)
 ```
-### Main Control System
+### Main Control System <a class="anchor" id="py-main-control"></a>
 The "task1()" function brings together all the main components of the robot and establishes their initial configuration. It sets the values for the PD controller, assigns identification numbers to the red and green objects, configures the AI camera for color detection, and places the servo in its starting position. After this setup, the robot continuously reads information from its camera and ultrasonic sensors.
 ```ino
 def task1():
@@ -166,7 +173,7 @@ def task1():
         var_ultrasonico_1 = sensor.GetUltrasound(2)
         var_ultrasonico_2 = sensor.GetUltrasound(3)
 ```
-### Object Detection and Navigation
+### Object Detection and Navigation <a class="anchor" id="py-objdetec"></a>
 This section contains the main decision-making logic of the robot. It first checks whether an obstacle is dangerously close and, if so, activates the escape maneuver. If the path is clear, the robot checks which color has been detected and uses the PD controller to adjust its steering. When no recognized color is detected, the robot continues moving forward with the servo centered while searching for a target.
 ```ino
 if (((var_height > 250) or (var_ultrasonico_2 < 20)) or 
@@ -194,14 +201,14 @@ else:
 
     rcu.SetWaitForTime(0.05)
 ```
-### Starting the Program 
+### Starting the Program <a class="anchor" id="py-starting-code"></a>
 The final line calls the "task1()" function, which starts the entire control system. Once this function is executed, the robot begins its autonomous operation and continuously repeats the process of detecting objects, checking for obstacles, calculating steering corrections, and controlling its movement.
 ```ino
 task1()
 ```
 ## Block Code <a class="anchor" id="block-code"></a>
 This part uses RoboCode blocks to program an autonomous robot capable of detecting colored objects, adjusting its direction, and avoiding obstacles using ultrasonic sensors.
-### PD Steering Control
+### PD Steering Control <a class="anchor" id="block-pd-control"></a>
 The "calcular_angulo_pd" function controls the robot's steering according to the position of the detected object. It calculates the error between the current and target positions, then uses proportional and derivative control to determine the necessary steering correction. The final angle is limited between 40° and 140° to prevent excessive turns.
 
 <b>Block code:</b>
@@ -212,8 +219,9 @@ The "calcular_angulo_pd" function controls the robot's steering according to the
 
 ---
 
-### Escape Maneuver
+### Escape Maneuver <a class="anchor" id="block-escape-maneuver"></a>
 The "maniobra_escape" function is responsible for preventing collisions with walls or obstacles. The robot first stops and checks the distance detected by the ultrasonic sensors. Depending on which side is closer to an obstacle, it chooses a direction to turn, moves backward, and finally returns the servo to the center.
+
 <b>Block code:</b>
 
 <p align="center">
