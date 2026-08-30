@@ -37,6 +37,7 @@ This project is developed as part of our participation in the WRO Future Enginee
 
 ## Table of Contents
 * [The Team](#team)
+* [Robot Photos](#robot-image)
 
 ## The Team <a class="anchor" id="team"><a/>
 
@@ -58,7 +59,7 @@ This project is developed as part of our participation in the WRO Future Enginee
 <b>High School:</b> Ciberkids, Valledupar, Colombia
 
 
-## Vehicle's photos
+## Vehicle's photos <a class="anchor" id="robot-image"></a>
 
 | <img src="./v-photos/front.jpeg" width="90%" /> | <img src="./v-photos/back.jpeg" width="85%" /> | 
 | :--: | :--: | 
