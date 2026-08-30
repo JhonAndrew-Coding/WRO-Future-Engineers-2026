@@ -38,6 +38,12 @@ This project is developed as part of our participation in the WRO Future Enginee
 ## Table of Contents
 * [The Team](#team)
 * [Robot Photos](#robot-image)
+* [Mobility Management](mob-manager)
+  * [Power Train](power-train)
+    * [Diferencial](diferencial)
+    * [Motor](motor)
+  * [Steering](steering-sis)
+    * [Servo Motor](servo-motor) 
 * [Python Code](#py-code)
   * [Libraries and Variables](#py-lib-variables)
   * [PD Steering Control](#py-pd-control)
@@ -49,6 +55,7 @@ This project is developed as part of our participation in the WRO Future Enginee
   * [B PD Steering Control](#block-pd-control)
   * [B Escape Maneuver](#block-escape-maneuver)
   * [B Main System Setup and Sensor Reading](#block-main)
+  * [B Object Detection and Robot Navigation](#block-objdetec-final)
 
 ## The Team <a class="anchor" id="team"></a>
 
@@ -85,6 +92,14 @@ This project is developed as part of our participation in the WRO Future Enginee
 | *Left* | *Right* |
 | <img src="./v-photos/top.jpeg" width="90%" /> | <img src="./v-photos/bottom.jpeg" width="85%" /> | 
 | *Top* | *Bottom* |
+
+# Mobility Management <a class="anchor" id="mob-manager"></a>
+The robot's mobility is managed by a combination of components, including the powertrain and steering system. These elements work together to ensure the robot's smooth and efficient movement.
+
+## Power Train <a class="anchor" id="power-train"
+
+### Diferencial <a class="anchor" id="diferencial"
+
 
 ## Code Python <a class="anchor" id="py-code"></a>
 This program controls an autonomous robot using an AI camera, ultrasonic sensors, a servo motor, and drive motors. The robot is designed to detect colored objects, adjust its direction according to their position, and avoid obstacles while moving through its environment.
@@ -243,8 +258,8 @@ The "task1" function initializes the main parameters of the robot, including the
 
 ---
 
-### Object Detection and Robot Navigation <a class="anchor" id="block-objdetec"></a>
-This section contains the main decision-making process of the robot. It checks whether an obstacle is too close and activates the escape maneuver when necessary. If the path is clear, the robot identifies whether the detected object is red or green and uses the PD controller to adjust its direction. If no recognized object is detected, the robot continues moving forward with the servo centered.
+### Object Detection and Robot Navigation <a class="anchor" id="block-objdetec-final"></a>
+This section contains the main decision-making process of the robot. It checks whether an obstacle is too close and activates the escape maneuver when necessary. If the path is clear, the robot identifies whether the detected object is red or green and uses the PD controller to adjust its direction. If no recognized object is detected, the robot continues moving forward with the servo centered. The robot continuously repeats the detection and navigation process. A short delay of 0.05 seconds is used between cycles, allowing the sensors and AI camera to update their information while maintaining continuous movement.
 
 <p align="center">
   <img src="./src/Main_1.png" alt="Main Code 1" width="50%">
