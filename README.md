@@ -50,7 +50,7 @@ This project is developed as part of our participation in the WRO Future Enginee
   * [B Escape Maneuver](#block-escape-maneuver)
   * [B Main System Setup and Sensor Reading](#block-main)
 
-# The Team <a class="anchor" id="team"></a>
+## The Team <a class="anchor" id="team"></a>
 
 ### Juan Andrés Guerra
 <p align="center">
