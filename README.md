@@ -58,6 +58,12 @@ This project is developed as part of our participation in the WRO Future Enginee
 
 <b>High School:</b> Ciberkids, Valledupar, Colombia
 
+---
+
+### Team Photo
+<p align="center">
+  <img src="./t-photos/angel photo.jpeg" alt="Angel Valeria Ruiz" width="80%">
+</p>
 
 ## Vehicle's photos <a class="anchor" id="robot-image"></a>
 
