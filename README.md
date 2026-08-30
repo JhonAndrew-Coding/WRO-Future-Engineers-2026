@@ -19,12 +19,29 @@ _This part must be filled by participants with the technical clarifications abou
 
 ## Team Photos
 
+### Juan Andrés Guerra
+<p align="center">
+  <img src="./t-photos/juan A photo .jpeg" alt="Juan Andrés Guerra" width="80%">
+</p>
+
+<b>High School:</b> Windsor School, Valledupar
+
+---
+
+### Angel Valeria Ruiz
+
+<p align="center">
+  <img src="./t-photos/angel photo.jpeg" alt="Angel Valeria Ruiz" width="80%">
+</p>
+
+<b>High School:</b> Ciberkids, Valledupar
+
 
 ## Vehicle's photos
-====
+
 | <img src="./v-photos/front.jpeg" width="90%" /> | <img src="./v-photos/back.jpeg" width="85%" /> | 
 | :--: | :--: | 
-| *Front* |
+| *Front* | *Back* |
 | <img src="./v-photos/left.jpeg" width="90%" /> | <img src="./v-photos/right.jpeg" width="85%" /> | 
 | *Left* | *Right* |
 | <img src="./v-photos/top.jpeg" width="90%" /> | <img src="./v-photos/bottom.jpeg" width="85%" /> | 
