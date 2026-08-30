@@ -42,7 +42,7 @@ This project is developed as part of our participation in the WRO Future Enginee
   * [Power Train](#power-train)
     * [Diferencial](#diferencial)
     * [Motor](#motor)
-  * [Steering](#steering-sis)
+  * [Steering System](#steering-sis)
     * [Servo Motor](#servo-motor) 
 * [Python Code](#py-code)
   * [Libraries and Variables](#py-lib-variables)
@@ -120,6 +120,45 @@ In simple terms, the differential splits the drivetrain's power between the two 
 * Improves turning performance.
 * Reduces tire slipping during turns.
 * Built entirely with LEGO Technic gears, axles, and structural elements.
+
+### Motor <a class="anchor" id="motor"></a>
+**Medium Geared Motor 7.4V with Encoder**
+The ZMROBO Medium Geared Motor (JMP-BE-3579A) is a power component designed for robotic applications. It provides controlled rotational movement and is used to drive the vehicle's drivetrain.
+
+**How it works:**
+The motor receives control signals from the main controller and can rotate clockwise, counterclockwise, or stop/brake. Its speed can be adjusted across 100 levels, allowing precise control of the vehicle's movement.
+The motor includes a built-in encoder, which provides feedback about the motor's rotation. This allows the controller to monitor and precisely control the motor's movement.
+
+</p>
+<p align="center">
+  <img src="./models/Motor.png" alt="Motor" width="50%">
+</p>
+
+</p>
+<p align="center">
+  <img src="./models/Motor2.png" alt="Motor2" width="50%">
+</p>
+
+**Specifications**
+* Model: JMP-BE-3579A
+* Type: Medium Geared Motor with Encoder
+* Voltage range: 3.0–4.2 V DC
+* Rated voltage: 3.7 V
+* No-load current: ≤130 mA
+* No-load speed: 132 RPM ±10%
+* Stalling current: ≤1.5 A
+* Stalling torque: ≥1.8 kgf·cm
+* Connector: Standard 1.25 mm connector
+* Encoder: Built-in encoder
+* Speed control: 100 adjustable levels
+* Rotation: Clockwise and counterclockwise
+* Braking: Supported
+
+**Role in the Vehicle:**
+The motor acts as the main source of mechanical power. Its output rotation is transferred through the gear system to the drivetrain and differential, which then distributes the motion to the wheels. The encoder allows the controller to obtain rotational feedback, making it possible to achieve more accurate speed and movement control.
+
+## Steering System <a class="anchor" id="steering-sis"
+
 
 
 ## Code Python <a class="anchor" id="py-code"></a>
