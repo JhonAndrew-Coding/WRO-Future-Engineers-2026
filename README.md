@@ -38,7 +38,7 @@ This project is developed as part of our participation in the WRO Future Enginee
 ## Table of Contents
 * [The Team](#team)
 * [Robot Photos](#robot-image)
-* [Code of the robo](#code)
+* [Code of the robot](#code)
 
 ## The Team <a class="anchor" id="team"></a>
 
@@ -77,10 +77,14 @@ This project is developed as part of our participation in the WRO Future Enginee
 | *Top* | *Bottom* |
 
 ## Code Python <a class="anchor" id="code"></a>
+This program controls an autonomous robot using an AI camera, ultrasonic sensors, a servo motor, and drive motors. The robot is designed to detect colored objects, adjust its direction according to their position, and avoid obstacles while moving through its environment.
 
+### Libraries and Variables
+
+The program starts by importing the libraries needed to communicate with and control the different hardware components of the robot. It also defines several global variables that will store information such as detected objects, sensor measurements, steering angles, and the values required for the PD controller.
 ```ino
-//we create all the variables
 import rcu, aicam, servo, sensor, motor
+
 var_ulti_error = 0
 var_kp = 0
 var_kd = 0
@@ -97,14 +101,17 @@ var_derivada = 0
 var_giro = 0
 var_angulo_seguro = 0
 var_angulo_escape = 0
-//The angle required to turn correctly is calculated.
+```
+### PD Steering Control
+The "calcular_angulo_pd()" function is responsible for determining how the robot should steer based on the position of the object detected by the AI camera. It calculates the difference between the object's current position and the desired position, then uses proportional and derivative values to create a smooth steering correction. The resulting angle is also limited to keep the servo within a safe range.
+```ino
 def calcular_angulo_pd(x_actual, x_objetivo):
-    global var_ulti_error,var_kp,var_kd,var_var_rojo,var_var_verde,var_id_obj,var_x_coord,var_height,var_ultrasonico_1,var_ultrasonico_2,var_angulo,var_error,var_derivada,var_giro,var_angulo_seguro
     var_error = x_objetivo - x_actual
     var_derivada = var_error - var_ulti_error
     var_giro = (var_error * var_kp) + (var_derivada * var_kd)
     var_ulti_error = var_error
     var_angulo = 90 + var_giro
+
     if (var_angulo > 140):
         var_angulo_seguro = 140
     else:
@@ -112,11 +119,14 @@ def calcular_angulo_pd(x_actual, x_objetivo):
             var_angulo_seguro = 40
         else:
             var_angulo_seguro = var_angulo
-//An escape maneuver is created to prevent the robot from colliding with the walls; ultrasonic sensors are used to calculate the distance to the wall.
+```
+### Escape Maneuver
+The "maniobra_escape()" function is designed to prevent the robot from colliding with nearby walls or obstacles. When an obstacle is detected, the robot stops and uses the distances measured by the ultrasonic sensors to determine the safest direction to turn. It then moves backward to create space before returning the servo to its central position.
+```ino
 def maniobra_escape(dist_derecha, dist_izquierda):
-    global var_ulti_error,var_kp,var_kd,var_var_rojo,var_var_verde,var_id_obj,var_x_coord,var_height,var_ultrasonico_1,var_ultrasonico_2,var_angulo,var_error,var_derivada,var_giro,var_angulo_seguro,var_angulo_escape
     motor.SetMotor(1, 0)
     rcu.SetWaitForTime(0.2)
+
     if (dist_izquierda < 100):
         var_angulo_escape = 140
     else:
@@ -124,55 +134,69 @@ def maniobra_escape(dist_derecha, dist_izquierda):
             var_angulo_escape = 40
         else:
             var_angulo_escape = 90
+
     servo.SetMagneticServoDegreeSpeed(1, var_angulo_escape, 90)
     motor.SetMotor(1, -70)
     rcu.SetWaitForTime(1)
+
     servo.SetMagneticServoDegreeSpeed(1, 90, 90)
     motor.SetMotor(1, 0)
     rcu.SetWaitForTime(0.2)
-//Everything is brought together, and the variables are defined to ensure everything works.
+```
+### Main Control System
+The "task1()" function brings together all the main components of the robot and establishes their initial configuration. It sets the values for the PD controller, assigns identification numbers to the red and green objects, configures the AI camera for color detection, and places the servo in its starting position. After this setup, the robot continuously reads information from its camera and ultrasonic sensors.
+```ino
 def task1():
-    global var_ulti_error,var_kp,var_kd,var_var_rojo,var_var_verde,var_id_obj,var_x_coord,var_height,var_ultrasonico_1,var_ultrasonico_2,var_angulo
     var_ulti_error = 0
     var_kp = 0.08
     var_kd = 0.005
+
     var_var_rojo = 1
     var_var_verde = 2
+
     aicam.SetWaitAICamCmd(5, "color")
     servo.SetMagneticServoDegreeSpeed(1, 90, 70)
+
     while True:
         var_id_obj = aicam.GetAICam(5, 1, 1)
         var_x_coord = aicam.GetAICamIDData(5, 1, 1)
         var_height = aicam.GetAICamIDData(5, 1, 4)
+
         var_ultrasonico_1 = sensor.GetUltrasound(2)
         var_ultrasonico_2 = sensor.GetUltrasound(3)
-        if (((var_height > 250) or (var_ultrasonico_2 < 20)) or (var_ultrasonico_1 < 20)):
-            rcu.SetLCDClear(0xF800)
-            maniobra_escape(var_ultrasonico_2, var_ultrasonico_1)
-            var_ulti_error = 0
-        else:
-            if (var_id_obj == var_var_rojo):
-                rcu.SetLCDClear(0x07E0)
-                calcular_angulo_pd(var_x_coord, 90)
-                if (var_ultrasonico_1 < 150):
-                    servo.SetMagneticServoDegreeSpeed(1, 140, 80)
-                else:
-                    servo.SetMagneticServoDegreeSpeed(1, var_angulo, 80)
-                motor.SetMotor(1, 80)
-            else:
-                if (var_id_obj == var_var_verde):
-                    rcu.SetLCDClear(0x07E0)
-                    calcular_angulo_pd(var_x_coord, 520)
-                    if (var_ultrasonico_2 < 150):
-                        servo.SetMagneticServoDegreeSpeed(1, 40, 80)
-                    else:
-                        servo.SetMagneticServoDegreeSpeed(1, var_angulo, 80)
-                    motor.SetMotor(1, 80)
-                else:
-                    rcu.SetLCDClear(0x001F)
-                    servo.SetMagneticServoDegreeSpeed(1, 90, 70)
-                    motor.SetMotor(1, 100)
-                    var_ulti_error = 0
-        rcu.SetWaitForTime(0.05)
+```
+### Object Detection and Navigation
+This section contains the main decision-making logic of the robot. It first checks whether an obstacle is dangerously close and, if so, activates the escape maneuver. If the path is clear, the robot checks which color has been detected and uses the PD controller to adjust its steering. When no recognized color is detected, the robot continues moving forward with the servo centered while searching for a target.
+```ino
+if (((var_height > 250) or (var_ultrasonico_2 < 20)) or 
+    (var_ultrasonico_1 < 20)):
 
+    maniobra_escape(var_ultrasonico_2, var_ultrasonico_1)
+    var_ulti_error = 0
+
+else:
+    if (var_id_obj == var_var_rojo):
+        calcular_angulo_pd(var_x_coord, 90)
+        servo.SetMagneticServoDegreeSpeed(1, var_angulo, 80)
+        motor.SetMotor(1, 80)
+
+    else:
+        if (var_id_obj == var_var_verde):
+            calcular_angulo_pd(var_x_coord, 520)
+            servo.SetMagneticServoDegreeSpeed(1, var_angulo, 80)
+            motor.SetMotor(1, 80)
+
+        else:
+            servo.SetMagneticServoDegreeSpeed(1, 90, 70)
+            motor.SetMotor(1, 100)
+            var_ulti_error = 0
+
+    rcu.SetWaitForTime(0.05)
+```
+### Starting the Program 
+The final line calls the "task1()" function, which starts the entire control system. Once this function is executed, the robot begins its autonomous operation and continuously repeats the process of detecting objects, checking for obstacles, calculating steering corrections, and controlling its movement.
+```ino
 task1()
+```
+
+
