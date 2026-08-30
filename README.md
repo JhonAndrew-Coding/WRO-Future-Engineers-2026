@@ -43,7 +43,11 @@ This project is developed as part of our participation in the WRO Future Enginee
     * [Diferencial](#diferencial)
     * [Motor](#motor)
   * [Steering System](#steering-sis)
-    * [Servo Motor](#servo-motor) 
+    * [Servo Motor](#servo-motor)
+* [Other Electronic](#others)
+  * [RCU](#rcu)
+  * [Ultrasonic Sensor](#utra_sensor)
+  * [AI CAM](#aicam)
 * [Python Code](#py-code)
   * [Libraries and Variables](#py-lib-variables)
   * [PD Steering Control](#py-pd-control)
@@ -212,6 +216,12 @@ In the steering system, the servo's output shaft is connected to a gear mechanis
 
 The servo acts as the main actuator of the steering system. It converts electrical commands from the controller into precise rotational movement, which is then transmitted through the gears to the steering mechanism. Its high positioning accuracy and strong torque allow the front wheels to be controlled reliably.
 This combination of precise positioning, metal gears, and double ball bearings makes the servo suitable for accurate and responsive steering in the robot.
+
+## Others Electronics <a class="anchor" id="others"></a>
+This section provides detailed information about the electronic components used in the robot and their role within the overall system. Each component is responsible for a specific function, and together they allow the robot to perceive its environment, process information, communicate with the user, and control its movement.
+The electronic system includes the camera, ultrasonic sensors, and main controller. The camera is used to capture visual information from the robot's surroundings, providing data that can be processed for vision-based applications. The ultrasonic sensors allow the robot to detect objects and estimate distances, which is essential for obstacle detection and navigation.
+The controller acts as the central unit of the robot. It receives information from the sensors and camera, processes the available data, and sends commands to the motors and servo systems. This allows the robot to coordinate its movement and respond to changes in its environment.
+Overall, this section explains the purpose, specifications, communication, and integration of each electronic component, providing a better understanding of how the different parts work together to form a complete robotic system.
 
 ## Code Python <a class="anchor" id="py-code"></a>
 This program controls an autonomous robot using an AI camera, ultrasonic sensors, a servo motor, and drive motors. The robot is designed to detect colored objects, adjust its direction according to their position, and avoid obstacles while moving through its environment.
