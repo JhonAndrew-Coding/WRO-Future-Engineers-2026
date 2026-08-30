@@ -249,7 +249,6 @@ This section contains the main decision-making process of the robot. It checks w
 <p align="center">
   <img src="./src/Main_1.png" alt="Main Code 1" width="50%">
 </p>
-
 <p align="center">
   <img src="./src/Main_2.png" alt="Main Code 2" width="50%">
 </p>
