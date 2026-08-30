@@ -38,6 +38,7 @@ This project is developed as part of our participation in the WRO Future Enginee
 ## Table of Contents
 * [The Team](#team)
 * [Robot Photos](#robot-image)
+* [Code of the robo](#code)
 
 ## The Team <a class="anchor" id="team"></a>
 
@@ -77,6 +78,8 @@ This project is developed as part of our participation in the WRO Future Enginee
 
 ## Code Python <a class="anchor" id="code"></a>
 
+```ino
+//we create all the variables
 import rcu, aicam, servo, sensor, motor
 var_ulti_error = 0
 var_kp = 0
@@ -94,7 +97,7 @@ var_derivada = 0
 var_giro = 0
 var_angulo_seguro = 0
 var_angulo_escape = 0
-
+//The angle required to turn correctly is calculated.
 def calcular_angulo_pd(x_actual, x_objetivo):
     global var_ulti_error,var_kp,var_kd,var_var_rojo,var_var_verde,var_id_obj,var_x_coord,var_height,var_ultrasonico_1,var_ultrasonico_2,var_angulo,var_error,var_derivada,var_giro,var_angulo_seguro
     var_error = x_objetivo - x_actual
@@ -109,7 +112,7 @@ def calcular_angulo_pd(x_actual, x_objetivo):
             var_angulo_seguro = 40
         else:
             var_angulo_seguro = var_angulo
-
+//An escape maneuver is created to prevent the robot from colliding with the walls; ultrasonic sensors are used to calculate the distance to the wall.
 def maniobra_escape(dist_derecha, dist_izquierda):
     global var_ulti_error,var_kp,var_kd,var_var_rojo,var_var_verde,var_id_obj,var_x_coord,var_height,var_ultrasonico_1,var_ultrasonico_2,var_angulo,var_error,var_derivada,var_giro,var_angulo_seguro,var_angulo_escape
     motor.SetMotor(1, 0)
@@ -127,7 +130,7 @@ def maniobra_escape(dist_derecha, dist_izquierda):
     servo.SetMagneticServoDegreeSpeed(1, 90, 90)
     motor.SetMotor(1, 0)
     rcu.SetWaitForTime(0.2)
-
+//Everything is brought together, and the variables are defined to ensure everything works.
 def task1():
     global var_ulti_error,var_kp,var_kd,var_var_rojo,var_var_verde,var_id_obj,var_x_coord,var_height,var_ultrasonico_1,var_ultrasonico_2,var_angulo
     var_ulti_error = 0
