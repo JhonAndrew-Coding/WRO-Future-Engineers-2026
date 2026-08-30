@@ -203,5 +203,5 @@ task1()
 This part uses RoboCode blocks to program an autonomous robot capable of detecting colored objects, adjusting its direction, and avoiding obstacles using ultrasonic sensors.
 ### PD Steering Control
 The "calcular_angulo_pd" function controls the robot's steering according to the position of the detected object. It calculates the error between the current and target positions, then uses proportional and derivative control to determine the necessary steering correction. The final angle is limited between 40° and 140° to prevent excessive turns.
-
+![PD Steering Control](.src/PD Control.png)
 
