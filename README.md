@@ -44,9 +44,9 @@ This project is developed as part of our participation in the WRO Future Enginee
     * [Motor](#motor)
   * [Steering System](#steering-sis)
     * [Servo Motor](#servo-motor)
-* [Other Electronic](#others)
+* [Others Electronics](#others)
   * [RCU](#rcu)
-  * [Ultrasonic Sensor](#utra_sensor)
+  * [Ultrasonic Sensor](#utra-sensor)
   * [AI CAM](#aicam)
 * [Python Code](#py-code)
   * [Libraries and Variables](#py-lib-variables)
@@ -218,10 +218,55 @@ The servo acts as the main actuator of the steering system. It converts electric
 This combination of precise positioning, metal gears, and double ball bearings makes the servo suitable for accurate and responsive steering in the robot.
 
 ## Others Electronics <a class="anchor" id="others"></a>
-This section provides detailed information about the electronic components used in the robot and their role within the overall system. Each component is responsible for a specific function, and together they allow the robot to perceive its environment, process information, communicate with the user, and control its movement.
-The electronic system includes the camera, ultrasonic sensors, and main controller. The camera is used to capture visual information from the robot's surroundings, providing data that can be processed for vision-based applications. The ultrasonic sensors allow the robot to detect objects and estimate distances, which is essential for obstacle detection and navigation.
-The controller acts as the central unit of the robot. It receives information from the sensors and camera, processes the available data, and sends commands to the motors and servo systems. This allows the robot to coordinate its movement and respond to changes in its environment.
-Overall, this section explains the purpose, specifications, communication, and integration of each electronic component, providing a better understanding of how the different parts work together to form a complete robotic system.
+This section provides **detailed information about the electronic components used in the robot and their role within the overall system**. Each component performs a specific function, allowing the robot to perceive its environment, process information, and interact with the user.
+Overall, this section explains the **purpose, specifications, communication, and integration of each electronic component**, providing a clear understanding of how they work together as part of the robotic system.
+
+### RCU Controller <a class="anchor" id="rcu"></a>
+The **M6 RCU controller** acts as the central unit of the robot. It receives information from the sensors and camera, processes the available data, and sends commands to the motors and servo systems. This allows the robot to coordinate its movement and respond to changes in its environment.
+
+</p>
+<p align="center">
+  <img src="./models/M6_RCU.png" alt="Rcu" width="50%">
+</p>
+
+**Functions:**
+* C6-RCU is powered by a lithium battery or an external circuit and supplies power to sensors or motors through a connection cable.
+* It has a storage function and compiled programs can be downloaded to the controller.
+* It can execute compiled programs online or offline and transmit working signals to sensors or motors at different ports.
+* It has a built-in Bluetooth module, sound sensor, and buzzer.
+
+### Ultrasonic Sensor <a class="anchor" id="ultra-sensor"></a>
+The **ZMROBO Ultrasonic Sensors** allow the robot to detect objects and estimate distances, which is essential for obstacle detection and navigation.
+
+</p>
+<p align="center">
+  <img src="./models/Ultrasonic_Sensor.png" alt="El ultra" width="50%">
+</p>
+
+**Function:**
+* Determine the distance by transmitting an ultrasonic signal and receiving an ultrasonic signal reflected by the ranging object.
+
+**Parameters:**
+* Standard ZMROBO RCU universal telephone line interface
+* Working voltage 5V
+* Detection distance 5-200CM, accuracy 1CM
+* Built-in two full-color LED lights for custom colors.
+
+### AI CAM <a class="anchor" id="aicam"></a>
+The **ZMROBO AI CAM (AI Vision Module V2.0)** is a Built-in Al algorithms and zero-code Al access make smart creation effortless.
+
+</p>
+<p align="center">
+  <img src="./models/AI_CAM.png" alt="Ai cam" width="50%">
+</p>
+
+**Specifications**
+* 2.4" Capacitive Touchscreen
+* Speech Recognition
+* Image Learning
+* Vision Recognition
+* Color Recognition
+**And much more**
 
 ## Code Python <a class="anchor" id="py-code"></a>
 This program controls an autonomous robot using an AI camera, ultrasonic sensors, a servo motor, and drive motors. The robot is designed to detect colored objects, adjust its direction according to their position, and avoid obstacles while moving through its environment.
