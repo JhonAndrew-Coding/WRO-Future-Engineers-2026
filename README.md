@@ -7,13 +7,13 @@ The project focuses on autonomous navigation, obstacle detection, trajectory pla
 <table align="center" cellspacing="12">
 <tr>
   <td bgcolor="#ffffff" align="center" width="200">
-    <img src="" height="55">
+    <img src="./other/fundacion-manos-roboticas.jpg" height="55">
   </td>
   <td bgcolor="#ffffff" align="center" width="200">
-    <img src="https://aprendercreando.com.pe/wp-content/uploads/2024/01/channels4_profile.jpg" height="55">
+    <img src="./other/BotCody.jpg" height="55">
   </td>
   <td bgcolor="#ffffff" align="center" width="200">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0LY8Xd5VeIR2pYpduTlY_PUy1w2P9Q-34kNeE_H0ZuG0jDHBTKcXVbkQ&s=10" height="55">
+    <img src="./other/zmrobo.jpg" height="55">
 </tr>
 
 
