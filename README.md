@@ -17,6 +17,20 @@ The project focuses on autonomous navigation, obstacle detection, trajectory pla
 </tr>
 </table>
 
+## 📂 Folder Structure
+
+This repository is organized as follows:
+
+```
+📦 WRO-Future-Engineers-2026
+├── 📁 models                # Contains Images of each sensor and robot model
+├── 📁 other                 # Contains files that do not fit into other categories
+├── 📁 src                   # Main source code for the robot in Python and Block
+├── 📁 t-photos              # Photos of each team member and team photo
+├── 📁 v-photos              # Videos of our robot
+└── 📄 README.md             # Main documentation for the project
+```
+
 ## Project Overview
 
 The autonomous system integrates sensor processing, vehicle control, and navigation algorithms to achieve reliable and precise movement. The software continuously processes information from the vehicle's sensors and adjusts its trajectory according to the detected conditions.
