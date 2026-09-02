@@ -4,7 +4,7 @@ This repository contains the software and documentation developed for an autonom
 The project focuses on autonomous navigation, obstacle detection, trajectory planning, and real-time decision-making. The vehicle is designed to interpret sensor data from its environment and use this information to determine and execute appropriate movements throughout the competition field.
 
 ## Parners
-<table align="center" cellspacing="12">
+<table align="center" cellspacing="3">
 <tr>
   <td bgcolor="#ffffff" align="center" width="200">
     <img src="./other/fundacion-manos-roboticas.jpg" height="55">
