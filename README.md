@@ -3,6 +3,20 @@ This repository contains the software and documentation developed for an autonom
 
 The project focuses on autonomous navigation, obstacle detection, trajectory planning, and real-time decision-making. The vehicle is designed to interpret sensor data from its environment and use this information to determine and execute appropriate movements throughout the competition field.
 
+## Parners
+<table align="center" cellspacing="12">
+<tr>
+  <td bgcolor="#ffffff" align="center" width="200">
+    <img src="" height="55">
+  </td>
+  <td bgcolor="#ffffff" align="center" width="200">
+    <img src="https://aprendercreando.com.pe/wp-content/uploads/2024/01/channels4_profile.jpg" height="55">
+  </td>
+  <td bgcolor="#ffffff" align="center" width="200">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0LY8Xd5VeIR2pYpduTlY_PUy1w2P9Q-34kNeE_H0ZuG0jDHBTKcXVbkQ&s=10" height="55">
+</tr>
+
+
 ## Project Overview
 
 The autonomous system integrates sensor processing, vehicle control, and navigation algorithms to achieve reliable and precise movement. The software continuously processes information from the vehicle's sensors and adjusts its trajectory according to the detected conditions.
