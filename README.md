@@ -15,7 +15,7 @@ The project focuses on autonomous navigation, obstacle detection, trajectory pla
   <td bgcolor="#ffffff" align="center" width="200">
     <img src="./other/zmrobo.jpg" height="55">
 </tr>
-
+</table>
 
 ## Project Overview
 
