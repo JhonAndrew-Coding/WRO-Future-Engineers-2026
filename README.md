@@ -27,7 +27,7 @@ This repository is organized as follows:
 ├── 📁 other                 # Contains files that do not fit into other categories
 ├── 📁 src                   # Main source code for the robot in Python and Block
 ├── 📁 t-photos              # Photos of each team member and team photo
-├── 📁 v-photos              # Videos of our robot
+├── 📁 v-photos              # This directory contains photos of the robot.
 └── 📄 README.md             # Main documentation for the project
 ```
 
